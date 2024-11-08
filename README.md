@@ -10,25 +10,40 @@ Start off by forking this repository. In your README, write a design doc to outl
 
 #### Introduction
 - What motivates your project?
+- The idea for this project comes from combining gameplay elements from Pac-Man and Diablo. I’ve always enjoyed the collection mechanics in Pac-Man and the randomized dungeon generation in Diablo, so I thought it’d be interesting to combine the two. The goal is to create a game where players can explore a procedurally generated dungeon, collect items,and have a unique  experience every time.
 
 #### Goal
 - What do you intend to achieve with this project?
+- The main goal is to build a dungeon exploration game where players can move around in a randomly generated map, collect items, and enjoy a fresh experience each time due to the varied dungeon layouts.
 
 #### Inspiration/reference:
 - You must have some form of reference material for your final project. Your reference may be a research paper, a blog post, some artwork, a video, another class at Penn, etc.  
 - Include in your design doc links to and images of your reference material.
+- Resources：https://www.youtube.com/watch?v=LQC6EVTgsJ4&t=1s （Procedural Dungeon Generation Tutorial）
+- https://www.youtube.com/watch?v=LdpItlRg8OM （Unity Procedural Generation of a 2D Dungeon）
 
 #### Specification:
 - Outline the main features of your project.
+- Player Movement: Allowing players to move freely within the dungeon.
+- Random Dungeon Generation: A new dungeon layout is generated every time the player starts.
+- Random Collectible Spawning: Items are randomly placed around the dungeon to encourage exploration.
 
 #### Techniques:
 - What are the main technical/algorithmic tools you’ll be using? Give an overview, citing specific papers/articles.
+- UE5
+- BluePrint
+- Binary space partition 
+  https://www.roguebasin.com/index.php?title=Basic_BSP_Dungeon_generation
+  https://en.wikipedia.org/wiki/Binary_space_partitioning
 
 #### Design:
 - How will your program fit together? Make a simple free-body diagram illustrating the pieces.
 
 #### Timeline:
 - Create a week-by-week set of milestones for each person in your group. Make sure you explicitly outline what each group member's duties will be.
+- | **Milestone 1 (Nov. 13)** | Set up player movement and the initial Blueprint framework|
+| **Milestone 2 (Nov. 25)** | Implement and test the dungeon generation system |
+| **Final Submission (Dec. 2)** | Add the random collectible spawning and make sure items appear in accessible spots and Final polish, testing, and bug fixing.| 
 
 Submit your Design doc as usual via pull request against this repository.
 ## Milestone 1: Implementation part 1 (due 11/13)
