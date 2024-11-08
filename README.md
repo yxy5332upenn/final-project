@@ -35,6 +35,8 @@ Start off by forking this repository. In your README, write a design doc to outl
 - Binary space partition 
   https://www.roguebasin.com/index.php?title=Basic_BSP_Dungeon_generation
   https://en.wikipedia.org/wiki/Binary_space_partitioning
+- L-system
+  https://en.wikipedia.org/wiki/L-system
 
 #### Design:
 - How will your program fit together? Make a simple free-body diagram illustrating the pieces.
