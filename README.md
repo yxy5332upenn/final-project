@@ -53,9 +53,13 @@ Begin implementing your engine! Don't worry too much about polish or parameter t
 
 Put all your code in your forked repository.
 
-Submission: Add a new section to your README titled: Milestone #1, which should include
-- written description of progress on your project goals. If you haven't hit all your goals, what's giving you trouble?
-- Examples of your generators output so far
+Milestone 1:
+Familiar with the UE5 and its blueprints
+Allowing players to move with WASD keys 
+Allowing players to move with the mouse
+
+![image](yangyu1.png)
+
 We'll check your repository for updates. No need to create a new pull request.
 ## Milestone 2: Implementation part 2 (due 11/25)
 We're over halfway there! This week should be about fixing bugs and extending the core of your generator. Make sure by the end of this week _your generator works and is feature complete._ Any core engine features that don't make it in this week should be cut! Don't worry if you haven't managed to exactly hit your goals. We're more interested in seeing proof of your development effort than knowing your planned everything perfectly. 
