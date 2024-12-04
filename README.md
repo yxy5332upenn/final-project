@@ -68,65 +68,39 @@ complete the dungeon generator and I'm going to add more different typr of rooms
 
 
 ## Final submission (due 12/2)
-Time to polish! Spen this last week of your project using your generator to produce beautiful output. Add textures, tune parameters, play with colors, play with camera animation. Take the feedback from class critques and use it to take your project to the next level.
+## Overview
+This project is a dungeon game where players experience a unique dungeon layout every time they start a new game. 
+The core features of the game include procedurally generated dungeons, ensuring that the overall structure, coin spawn locations, and enemy distributions vary each time the game is played. 
+These dynamic elements create a fresh and engaging experience for players, encouraging exploration and adaptability in every session
 
-Submission:
-- Push all your code / files to your repository
-- Come to class ready to present your finished project
-- Update your README with two sections 
-  - final results with images and a live demo if possible
-  - post mortem: how did your project go overall? Did you accomplish your goals? Did you have to pivot?
+## Room Random Generation
+![image](yangyu3.png)
+![image](yangyu4.png)
+![image](yangyu5.png)
+Each dungeon consists of a total of 30 rooms that are procedurally generated. I designed five distinct room types, each with unique layouts and varying numbers of exits. The generation logic revolves around a list that stores information about the available exit positions of all previously generated rooms.
+![image](yangyu6.png)
+For each new room, the program randomly selects an exit position from this list and uses it as the starting point for the next room. The type of the new room is also chosen randomly. To prevent multiple rooms from being generated from the same exit, the utilized exit information is removed from the list after each room is generated.
 
-## Topic Suggestions
+## Door Generation
+![image](yangyu7.png)
+To enhance the sense of mystery and make the dungeon more complicated, I implemented a random door generation system. After two rooms are connected, the program has a 50% chance of generating a door between them.
 
-### Create a generator in Houdini
+## Coin and Enemy Generation
+![image](yangyu8.png)
+To maintain balance within the game, I set limits on the number of coins and enemies that can be generated. Both coins and enemies are spawned at random locations within the generated dungeon.
 
-### A CLASSIC 4K DEMO
-- In the spirit of the demo scene, create an animation that fits into a 4k executable that runs in real-time. Feel free to take inspiration from the many existing demos. Focus on efficiency and elegance in your implementation.
-- Example: 
-  - [cdak by Quite & orange](https://www.youtube.com/watch?v=RCh3Q08HMfs&list=PLA5E2FF8E143DA58C)
+Once the predefined maximum number of coins or enemies has been reached, their generation stops
 
-### A RE-IMPLEMENTATION
-- Take an academic paper or other pre-existing project and implement it, or a portion of it.
-- Examples:
-  - [2D Wavefunction Collapse Pokémon Town](https://gurtd.github.io/566-final-project/)
-  - [3D Wavefunction Collapse Dungeon Generator](https://github.com/whaoran0718/3dDungeonGeneration)
-  - [Reaction Diffusion](https://github.com/charlesliwang/Reaction-Diffusion)
-  - [WebGL Erosion](https://github.com/LanLou123/Webgl-Erosion)
-  - [Particle Waterfall](https://github.com/chloele33/particle-waterfall)
-  - [Voxelized Bread](https://github.com/ChiantiYZY/566-final)
+## Enemy AI
+![image](yangyu9.png)
+Each enemy patrols within a circular area centered around itself, with patrol points being randomly chosen within this radius. Additionally, every enemy is equipped with a trigger mechanism.
 
-### A FORGERY
-Taking inspiration from a particular natural phenomenon or distinctive set of visuals, implement a detailed, procedural recreation of that aesthetic. This includes modeling, texturing and object placement within your scene. Does not need to be real-time. Focus on detail and visual accuracy in your implementation.
-- Examples:
-  - [The Shrines](https://github.com/byumjin/The-Shrines)
-  - [Watercolor Shader](https://github.com/gracelgilbert/watercolor-stylization)
-  - [Sunset Beach](https://github.com/HanmingZhang/homework-final)
-  - [Sky Whales](https://github.com/WanruZhao/CIS566FinalProject)
-  - [Snail](https://www.shadertoy.com/view/ld3Gz2)
-  - [Journey](https://www.shadertoy.com/view/ldlcRf)
-  - [Big Hero 6 Wormhole](https://2.bp.blogspot.com/-R-6AN2cWjwg/VTyIzIQSQfI/AAAAAAAABLA/GC0yzzz4wHw/s1600/big-hero-6-disneyscreencaps.com-10092.jpg)
+If the player enters this trigger area, the enemy detects the player's position and begins to chase them.
 
-### A GAME LEVEL
-- Like generations of game makers before us, create a game which generates an navigable environment (eg. a roguelike dungeon, platforms) and some sort of goal or conflict (eg. enemy agents to avoid or items to collect). Aim to create an experience that will challenge players and vary noticeably in different playthroughs, whether that means procedural dungeon generation, careful resource management or an interesting AI model. Focus on designing a system that is capable of generating complex challenges and goals.
-- Examples:
-  - [Rhythm-based Mario Platformer](https://github.com/sgalban/platformer-gen-2D)
-  - [Pokémon Ice Puzzle Generator](https://github.com/jwang5675/Ice-Puzzle-Generator)
-  - [Abstract Exploratory Game](https://github.com/MauKMu/procedural-final-project)
-  - [Tiny Wings](https://github.com/irovira/TinyWings)
-  - Spore
-  - Dwarf Fortress
-  - Minecraft
-  - Rogue
 
-### AN ANIMATED ENVIRONMENT / MUSIC VISUALIZER
-- Create an environment full of interactive procedural animation. The goal of this project is to create an environment that feels responsive and alive. Whether or not animations are musically-driven, sound should be an important component. Focus on user interactions, motion design and experimental interfaces.
-- Examples:
-  - [The Darkside](https://github.com/morganherrmann/thedarkside)
-  - [Music Visualizer](https://yuruwang.github.io/MusicVisualizer/)
-  - [Abstract Mesh Animation](https://github.com/mgriley/cis566_finalproj)
-  - [Panoramical](https://www.youtube.com/watch?v=gBTTMNFXHTk)
-  - [Bound](https://www.youtube.com/watch?v=aE37l6RvF-c)
+## Live Demo
+https://youtu.be/q4QX9JEPGF4
 
-### YOUR OWN PROPOSAL
-- You are of course welcome to propose your own topic . Regardless of what you choose, you and your team must research your topic and relevant techniques and come up with a detailed plan of execution. You will meet with some subset of the procedural staff before starting implementation for approval.
+## Post Mortem
+The overall progress of the final project went smoothly, with each milestone completed on schedule and achieving the desired results.
+However, given more time, I would consider improving the distribution of enemies within the dungeon. This adjustment would help prevent situations where enemies are overly concentrated in certain areas, ensuring a more balanced and enjoyable gameplay experience.
